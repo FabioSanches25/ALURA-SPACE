@@ -2,7 +2,7 @@
 
 <section class="conteudo">
     <section class="banner">
-        <img class="banner__imagem" src="{% static 'assets/imagens/Banner(2).png' %}" alt="banner Alura Space">
+        <img class="banner__imagem" src="{%static 'assets/imagens/Banner(2).png'%}" alt="banner Alura Space">
         <h1 class="banner__titulo"> A galeria mais completa de fotos do espaço!</h1>
     </section>
     <section class="tags">
@@ -34,12 +34,14 @@
                         <div class="card__texto">
                             <p class="card__descricao">{{ fotografia.legenda }}</p>
                             <span>
-                                            <img src="{% static 'assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+                                            <img src="{% static 'assets/ícones/1x/favorite_outline.png'%}" alt="ícone de coração">
                                         </span>
                         </div>
                     </div>
                 </li>
-                {% endfor %} {% else %} {% endif %}
+                {% endfor %} {% else %} 
+                <div class="imagem"><p>Fotografias não encontradas.</p></div>
+                {% endif %}
             </ul>
         </div>
 
@@ -49,3 +51,4 @@
 </div>
 
 {% endblock %}
+
