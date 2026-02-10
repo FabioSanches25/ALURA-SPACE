@@ -1,11 +1,10 @@
 from django.urls import path
-from galeria.views import index, imagem
-
-
+from usuarios.views import login, cadastro, logout
 urlpatterns = [
-    
-    path('', index, name='index'),
-    path('imagem/<int:foto_id>', imagem, name='imagem'),
+   path('login', login, name='login'),
+   path('cadastro', cadastro, name='cadastro'),
+   path('logout', logout, name='logout'),
+
 
 ]
 
